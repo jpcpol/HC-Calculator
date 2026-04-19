@@ -42,7 +42,8 @@ El enfoque principal es:
 
 ## 3. 🏗️ Arquitectura General
 
-```
+---
+
 [Usuario / Input]
         ↓
 [Frontend (futuro) / API REST]
@@ -56,7 +57,6 @@ El enfoque principal es:
       [Modelo local (Ollama)]
           ↓
    (fallback opcional API externa)
-```
 
 ---
 
@@ -147,12 +147,12 @@ Uso limitado a:
 
 ## 5. 🐳 Estrategia de Despliegue
 
-### Infraestructura:
+### Infraestructura
 
 * VPS estándar (sin GPU)
 * Docker + Docker Compose
 
-### Servicios:
+### Servicios
 
 * API (FastAPI)
 * Postgres
@@ -162,18 +162,20 @@ Uso limitado a:
 
 ## 6. 🔄 Flujo de Actualización
 
-### Método inicial:
+### Método inicial
 
 * Conexión por SSH
 * Uso de Docker Compose
 
-```
+---
+
 git pull
 docker-compose pull
 docker-compose up -d
-```
 
-### Evolución:
+---
+
+### Evolución
 
 * Integración con CI/CD (GitHub Actions)
 * Deploy automatizado
